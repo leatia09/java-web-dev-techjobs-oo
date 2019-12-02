@@ -73,14 +73,16 @@ public class Job {
 
     @Override
     public boolean equals(Object o) {
-        if(this == o) return true;
-        if(!(o instanceof Job)) return false;
+        if (this == o) return true;
+        if (!(o instanceof Job)) return false;
         Job that = (Job) o;
         return id == that.id;
     }
 
     @Override
-    public int hashCode() { return Objects.hash(id); }
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
 
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
@@ -92,4 +94,32 @@ public class Job {
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
+
+    @Override
+    public String toString() {
+        if (name == "") {
+            name = "Data not avaliable";
+        }
+        if (employer.getValue() == "") {
+            employer.setValue("Data not avaliable");
+        }
+        if (location.getValue() == "") {
+            location.setValue("Data not avaliable");
+        }
+        if (positionType.getValue() == "") {
+            positionType.setValue("Data not available");
+        }
+        if (coreCompetency.getValue() == "") {
+            coreCompetency.setValue("Data not avaliable");
+        }
+
+        return "\n" +
+                "ID: " + id + "\n" +
+                "Name: " + name + "\n" +
+                "Employer: " + employer.getValue() + "\n" +
+                "Location: " + location.getValue() + "\n" +
+                "Position Type: " + positionType.getValue() + "\n" +
+                "Core Competency: " + coreCompetency.getValue() + "\n";
+
+    }
 }

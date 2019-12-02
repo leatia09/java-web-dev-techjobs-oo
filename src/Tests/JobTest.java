@@ -56,4 +56,28 @@ public class JobTest {
         int secondId = test_job4.getId();
         assertFalse( firstId == secondId);
     }
+
+    @Test
+    public void testToString() {
+        assertEquals ("\n" +
+                "ID: " + test_job3.getId() + "\n"+
+                "Name: " + "Product Tester" + "\n" +
+                "Employer: " + "ACME" + "\n" +
+                "Location: " + "Desert" + "\n" +
+                "Position Type: " + "Quality control" + "\n" +
+                "Core Competency: " + "Persistence" +
+                "\n", test_job3.toString() );
+
+        System.out.println("test_job6: " + test_job6);
+
+        assertEquals( "\n" +
+                "ID: " + test_job6.getId() + "\n" +
+                "Name: " + "Data not avaliable" + "\n" +
+                "Employer: "+ "ACME" + "\n" +
+                "Location: " + "City" + "\n" +
+                "Position Type: " + "Developer" + "\n" +
+                "Core Competency: " + "Persistence" +
+                "\n", test_job6.toString() );
+
+    }
 }
