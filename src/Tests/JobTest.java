@@ -61,7 +61,7 @@ public class JobTest {
     public void testToString() {
         assertEquals ("\n" +
                 "ID: " + test_job3.getId() + "\n"+
-                "Name: " + "Product Tester" + "\n" +
+                "Name: " + "Product tester" + "\n" +
                 "Employer: " + "ACME" + "\n" +
                 "Location: " + "Desert" + "\n" +
                 "Position Type: " + "Quality control" + "\n" +
